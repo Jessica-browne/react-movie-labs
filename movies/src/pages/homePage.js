@@ -19,10 +19,10 @@ const HomePage = (props) => {
       return genreId > 0 ? m.genre_ids.includes(genreId) : true;
     });
 
-  const handleChange = (type, value) => {
-    if (type === "name") setNameFilter(value);
-    else setGenreFilter(value);
-  };
+    const handleChange = (e, type, value) => {
+      e.preventDefault()
+      props.onUserInput(type, value)   // NEW
+    }
 
   useEffect(() => {
     fetch(
@@ -51,7 +51,7 @@ const HomePage = (props) => {
       genreFilter={genreFilter}
     />
         </Grid>
-        <MovieList movies={movies}></MovieList>
+        <MovieList movies={displayedMovies} />
       </Grid>
     </Grid>
   );
