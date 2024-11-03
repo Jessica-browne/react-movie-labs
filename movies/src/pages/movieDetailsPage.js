@@ -21,24 +21,25 @@ const MoviePage = (props) => {
                 flexWrap: "wrap",
                 justifyContent: "space-around",
               }}>
-                <ImageList
-                  sx={{
-                    height: "100vh",
-                  }}
-                  cols={1}
-                >
-                  {images.map((image) => (
-                    <ImageListItem
-                      key={image}
-                      cols={1}
-                    >
-                      <img
-                        src={`https://image.tmdb.org/t/p/w500/${image}`}
-                        alt={image}
-                      />
-                    </ImageListItem>
-                  ))}
-                </ImageList>
+  <ImageList
+    sx={{
+      height: "100vh",
+    }}
+    cols={1}
+  >
+    {images.map((image) => (
+      <ImageListItem
+      key={image.file_path}
+      cols={1}
+      >
+        <img
+          src={`https://image.tmdb.org/t/p/w500/${image.file_path}`}
+          alt={image.file_path}
+        />
+      </ImageListItem>
+    ))}
+  </ImageList>
+
               </div>
             </Grid>
             <Grid size={{xs: 9}}>

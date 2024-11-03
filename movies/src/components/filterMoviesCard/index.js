@@ -9,7 +9,8 @@ import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg'
+import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg';
+import { Link } from "react-router-dom";
 
 
 const formControl = 
@@ -103,6 +104,14 @@ export default function FilterMoviesCard(props) {
           <br />
         </Typography>
       </CardContent>
+
+      <Link to={`/movies/${movie.id}`}>
+          <Button variant="outlined" size="medium" color="primary">
+            More Info ...
+          </Button>
+        </Link>
     </Card>
+
+
   );
 }
