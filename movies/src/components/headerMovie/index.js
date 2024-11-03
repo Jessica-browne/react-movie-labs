@@ -38,3 +38,5 @@ const MovieHeader = (props) => {
     </Paper>
   );
 };
+
+export default MovieHeader;
