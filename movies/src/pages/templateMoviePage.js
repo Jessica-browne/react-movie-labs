@@ -3,7 +3,7 @@ import MovieHeader from "../headerMovie";
 import Grid from "@mui/material/Grid2";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import { getMovieImages } from "../../api/tmdb-api";
+import { getMovieImages } from "../api/tmdb-api";
 
 const TemplateMoviePage = ({ movie, children }) => {
   const [images, setImages] = useState([]);
